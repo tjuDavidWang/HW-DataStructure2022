@@ -1,0 +1,15 @@
+﻿  main.cpp
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(36,59): error C2061: 语法错误: 标识符“LinkStack”
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(49,2): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(51,10): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(54,10): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(71,5): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(82,6): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(104,2): error C2065: “LinkStack”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(104,12): error C2275: “Box”: 应为表达式而不是类型
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(104,17): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(105,25): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(108,12): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(110,10): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(113,15): error C2065: “s”: 未声明的标识符
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P04 表达式转换\main.cpp(114,3): error C2065: “s”: 未声明的标识符

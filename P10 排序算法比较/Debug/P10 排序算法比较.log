@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\王蔚达\Desktop\大项目\数据结构课设\P10 排序算法比较\Sort.h(27,14): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  P10 排序算法比较.vcxproj -> C:\Users\王蔚达\Desktop\大项目\数据结构课设\Debug\P10 排序算法比较.exe
