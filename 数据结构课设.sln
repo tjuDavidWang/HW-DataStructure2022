@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P01 考试报名系统", "P01\P01.vcxproj", "{DE7C3F4D-5F56-4035-8074-A2DC3C38805F}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P02 求两链表交集", "P02 求两链表交集\P02 求两链表交集.vcxproj", "{D481E95F-BAC5-4005-A4D2-79EDA1A7487A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P03 迷宫问题", "P03 迷宫问题\P03 迷宫问题.vcxproj", "{30BF915B-9708-49E6-95BC-1A60DD3752E7}"
@@ -33,14 +31,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DE7C3F4D-5F56-4035-8074-A2DC3C38805F}.Debug|x64.ActiveCfg = Debug|x64
-		{DE7C3F4D-5F56-4035-8074-A2DC3C38805F}.Debug|x64.Build.0 = Debug|x64
-		{DE7C3F4D-5F56-4035-8074-A2DC3C38805F}.Debug|x86.ActiveCfg = Debug|Win32
-		{DE7C3F4D-5F56-4035-8074-A2DC3C38805F}.Debug|x86.Build.0 = Debug|Win32
-		{DE7C3F4D-5F56-4035-8074-A2DC3C38805F}.Release|x64.ActiveCfg = Release|x64
-		{DE7C3F4D-5F56-4035-8074-A2DC3C38805F}.Release|x64.Build.0 = Release|x64
-		{DE7C3F4D-5F56-4035-8074-A2DC3C38805F}.Release|x86.ActiveCfg = Release|Win32
-		{DE7C3F4D-5F56-4035-8074-A2DC3C38805F}.Release|x86.Build.0 = Release|Win32
 		{D481E95F-BAC5-4005-A4D2-79EDA1A7487A}.Debug|x64.ActiveCfg = Debug|x64
 		{D481E95F-BAC5-4005-A4D2-79EDA1A7487A}.Debug|x64.Build.0 = Debug|x64
 		{D481E95F-BAC5-4005-A4D2-79EDA1A7487A}.Debug|x86.ActiveCfg = Debug|Win32

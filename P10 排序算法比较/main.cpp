@@ -5,7 +5,8 @@
 using namespace std;
 
 #define MAX_NUM 100000000
-#define MAX_SORT_NUM 10000
+#define MAX_SORT_NUM 1000
+#define MAX_QUICKSORT_NUM 3000
 
 //默认排序结果为非递减的有序序列
 /**************************************
@@ -14,7 +15,8 @@ using namespace std;
 * 3.进行不同的排序方法排序，输出结果
 **************************************/
 
-void Sort(int* arr, int num, const char* funcName, void(*sort)(int*, int, SortData&)) {
+void Sort(int* arr, int num, const char* funcName, void(*sort)(int*, int, SortData&))
+{
 
 	//将arr中的元素复制给temp
 	int* temp = new int[num];
@@ -31,7 +33,7 @@ void Sort(int* arr, int num, const char* funcName, void(*sort)(int*, int, SortDa
 
 	auto end = chrono::steady_clock::now();
 	chrono::duration<double, std::milli>elapsed = end - start;
-
+	//格式输出时间
 	printf("\t%10.0lfms", elapsed.count());
 	printf("\t%15lld", data.compareTimes);
 	printf("\t%15lld\n", data.moveTimes);
@@ -49,25 +51,24 @@ void SortProcess(int* arr, int num, const char* name) {
 	if (num > MAX_SORT_NUM) {
 		cout << "冒泡排序              已跳过" << endl;
 		cout << "选择排序              已跳过" << endl;
-		cout << "直接插入排序          已跳过" << endl;
+		//cout << "直接插入排序          已跳过" << endl;
 		cout << "折半插入排序          已跳过" << endl;
 	}
 	else {
 		Sort(arr, num, "冒泡排序", BubbleSort);
 		Sort(arr, num, "选择排序", SelectSort);
-		Sort(arr, num, "直接插入排序", straightInsertSort);
+		//Sort(arr, num, "直接插入排序", straightInsertSort);
 		Sort(arr, num, "折半插入排序", binaryInsertSort);
 	}
 	Sort(arr, num, "希尔排序", ShellSort);
-	Sort(arr, num, "快速排序", QuickSort);
+	if (int(strcmp(name, "同序序列") == 0) + int(num > MAX_QUICKSORT_NUM) < 2)
+		Sort(arr, num, "快速排序", QuickSort);
 	Sort(arr, num, "堆排序", HeapSort);
 	Sort(arr, num, "归并排序", MergeSort);
-	Sort(arr, num, "计数排序", CountSort);
-	Sort(arr, num, "MSD基数排序", MSDRadixSort);
+	//Sort(arr, num, "计数排序", CountSort);
+	//Sort(arr, num, "MSD基数排序", MSDRadixSort);
 	Sort(arr, num, "LSD基数排序", LSDRadixSort);
 	cout << "===============================================================" << endl;
-
-
 }
 
 int main()
@@ -78,15 +79,12 @@ int main()
 	cout << "====================================================" << endl;
 	cout << "**                  1.冒泡排序                    **" << endl;
 	cout << "**                  2.选择排序                    **" << endl;
-	cout << "**                  3.直接插入排序                **" << endl;
-	cout << "**                  4.折半插入排序                **" << endl;
-	cout << "**                  5.希尔排序                    **" << endl;
-	cout << "**                  6.快速排序                    **" << endl;
-	cout << "**                  7.堆排序                      **" << endl;
-	cout << "**                  8.归并排序                    **" << endl;
-	cout << "**                  9.计数排序                    **" << endl;
-	cout << "**                  10.MSD基数排序                **" << endl;
-	cout << "**                  11.LSD基数排序                **" << endl;
+	cout << "**                  3.插入排序                    **" << endl;
+	cout << "**                  4.希尔排序                    **" << endl;
+	cout << "**                  5.快速排序                    **" << endl;
+	cout << "**                  6.堆排序                      **" << endl;
+	cout << "**                  7.归并排序                    **" << endl;
+	cout << "**                  8.基数排序                    **" << endl;
 	cout << "====================================================" << endl;
 	cout << endl;
 	cout << "请输入要产生随机数的个数：";
@@ -102,19 +100,19 @@ int main()
 	}
 
 	int* arr = new int[num];
-	GetArray _array;
 
-	_array.randomArray(arr, num);
+
+	Sequence::randomArray(arr, num);
 	cout << "含" << num << "个元素的随机序列已生成" << endl;
-
 	SortProcess(arr, num, "随机序列");
 
-	_array.ascendArray(arr, num);
+	Sequence::ascendArray(arr, num);
 	SortProcess(arr, num, "升序序列");
 
-	_array.descendArray(arr, num);
+	Sequence::descendArray(arr, num);
 	SortProcess(arr, num, "降序序列");
 
-
+	Sequence::equalArray(arr, num);
+	SortProcess(arr, num, "同序序列");
 
 }
